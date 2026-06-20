@@ -1,0 +1,28 @@
+version: 1
+labeling:
+  default_strategy: heuristic
+  output_dir: outputs/labels/weak_labels
+  binary_threshold: 3
+criteria:
+  visual_clarity:
+    weight: 0.25
+    description: Screen should be readable and visually uncluttered.
+  layout_consistency:
+    weight: 0.20
+    description: Components should be arranged consistently with predictable grouping.
+  touch_target_accessibility:
+    weight: 0.20
+    description: Interactive components should be discoverable and not overly dense.
+  information_density:
+    weight: 0.20
+    description: Text, images, and controls should not overload the screen.
+  task_efficiency_estimate:
+    weight: 0.15
+    description: The screen should appear likely to support task completion with few interactions.
+heuristic_thresholds:
+  high_density: 0.00008
+  high_complexity: 1.3
+  low_whitespace: 0.25
+  excessive_text_ratio: 0.45
+  minimum_score: 1
+  maximum_score: 5

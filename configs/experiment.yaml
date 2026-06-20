@@ -1,0 +1,29 @@
+paths:
+  rico_root: data
+  labels_path: data/labels.csv
+  rubric_path: configs/usability_rubric.yaml
+  output_dir: outputs/runs/legacy_experiment
+labeling:
+  enabled: true
+  overwrite: false
+  strategy: heuristic
+dataset:
+  image_size: 224
+  train_ratio: 0.7
+  validation_ratio: 0.15
+model:
+  num_classes: 2
+training:
+  batch_size: 8
+  epochs: 5
+  learning_rate: 0.001
+  device: cpu
+experiment:
+  seed: 42
+experiments:
+  mode: legacy_all_models_same_split
+  models:
+    - cnn
+    - resnet18
+    - efficientnet_b0
+    - ui_aware_hybrid

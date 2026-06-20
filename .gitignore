@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+*.log
+*.err.log
+*.run.log
+
+outputs/
+
+data/

@@ -1,0 +1,24 @@
+dataset:
+  sample_limit: 64
+  image_size: 64
+  train_ratio: 0.70
+  validation_ratio: 0.15
+labeling:
+  strategy: w3c_rules
+  binary_threshold: 3
+  negative_calibration_ratio: 0.25
+training:
+  epochs: 1
+  batch_size: 8
+  learning_rate: 0.001
+  device: cpu
+  num_workers: 0
+cache:
+  enabled: false
+  dir: outputs/cache/tensors
+experiment:
+  seed: 42
+  output_dir: outputs/runs/w3c_rule_cv_smoke
+  models:
+    - cnn
+    - ui_aware_hybrid
