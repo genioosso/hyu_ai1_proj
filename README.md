@@ -5,14 +5,25 @@ Rico 모바일 UI 스크린샷과 계층 정보를 사용해 화면을 `usable` 
 
 ## 데이터 준비
 
-실험을 실행하려면 아래 경로에 Rico 데이터가 있어야 합니다.
+Rico 데이터셋은 용량이 커서 GitHub 저장소에 포함하지 않습니다.
+데이터가 필요한 사용자는 아래 공식 아카이브에서 직접 다운로드해야 합니다.
+
+https://www.interactionmining.org/archive/rico
+
+다운로드한 데이터는 프로젝트 루트 기준으로 아래 구조가 되도록 배치합니다.
 
 ```text
 data/screenshots/
 data/hierarchies/
 ```
 
-원본 Rico 데이터는 용량이 커서 저장소에 포함하지 않습니다.
+라벨 파일은 실험 과정에서 생성하거나, 이미 생성된 파일이 있다면 아래 경로에 둘 수 있습니다.
+
+```text
+data/labels.csv
+data/w3c_rule_labels.csv
+```
+
 라벨은 실제 사용자 평가가 아니라, 화면 이미지와 계층 정보에서 관찰 가능한 정적 규칙으로 만든 약한 라벨입니다.
 
 ## 모델
